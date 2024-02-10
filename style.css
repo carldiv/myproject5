@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+body {
+    background-color: #191919;
+}
+
+.main {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+    background-color: #101010;
+    box-shadow: 0 0 10px #fff;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 35px 5% 0 5%;
+}
+
+.logo {
+    cursor: default;
+    font-weight: 700;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 2.2rem;
+    display: flex;
+    gap: 10px;
+    color: white;
+}
+.fa-yin-yang {
+    color: purple;
+}
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+nav ul li {
+    list-style: none;
+}
+nav ul li a {
+    letter-spacing: 0.04rem;
+    border: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.57rem;
+    transition: .4s;
+}
+nav ul li a:hover {
+    border-top: 3px solid purple;
+    color: purple;
+    transform: scale(1.2);
+}
+.home {
+    min-height: 100vh;
+}
+
+.home-container {
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    padding: 20rem 5% 0 5%;
+}
+.home-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.home-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-img img {
+    border: 3px solid purple;
+    border-radius: 100%;
+    width: min(25rem, 90%);
+}
+
+.sub {
+    font-size: 600;
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.title {
+    color: #fff;
+    font-size: 5rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.title span {
+    color: purple ;
+}
+
+.description {
+    font-weight: 700;
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.icons {
+    display: flex;
+    gap: 2rem;
+}
+
+.icons a i {
+    background: transparent;
+    padding: 15px;
+    color: #fff;
+    font-size: 1.5rem;
+    border-radius: 100%;
+    border: 1px solid white;
+    transition: .5s;
+}
+
+.icons a i:hover {
+    background-color: purple;
+    transform: scale(1.2);
+}
+nav input {
+    display: none;
+}
+
+.check-btn {
+    cursor: pointer;
+    color: #fff;
+    font-size: 2rem;
+    display: none;
+}
+@media (width < 800px) {
+    nav .check-btn {
+        display: block;
+        position: absolute;
+        right: 32px;
+    }
+    ul {
+        backdrop-filter: blur(10px);
+        position: absolute;
+        height: calc(100vh);
+        width: 100%;
+        left: -100%;
+        top: 85px;
+        background: transparent;
+        flex-direction: column;
+        justify-content: center;
+        gap: 3rem;
+    }
+
+    nav #check:checked ~ ul {
+        left: 0;
+    }
+    .home-container {
+        padding: 6rem 0 0 0;
+        text-align: center;
+        flex-direction: column-reverse;
+    }
+    .icons {
+        margin: auto;
+    }
+    .home-content {
+        padding-bottom: 5rem;
+        padding-top: 2rem;
+    }
+    .title {
+        font-size: 2.2rem;
+    }
+    .description {
+        font-size: 2rem;
+    }
+    .icons a i {
+        font-size: 1rem;
+    }
+        .about-content {
+            padding: 3rem 0 0 0;
+            text-align: center;
+            flex-direction: column;
+        }
+    
+        .about-text1 {
+            width: 360px;
+        }
+    
+        .about-text {
+            font-size: 1.4rem;
+        }
+    
+        .about-subtitle {
+            font-size: 1rem;
+        }
+        .about-img {
+            margin: auto;
+        }
+}
+
+
+.about{
+    padding-top: 5rem ;
+    background-color: #101010;
+    min-height: 100vh;
+}
+.about-logo {
+    text-align: center;
+    font-size: 6rem;
+    color: purple;
+}
+.about-content {
+    padding: 10rem 5% 5rem 5%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.about-img img {
+    background-color: purple;
+    border-radius: 100%;
+    width: min(30rem, 90%);
+}
+
+
+.about-text1 {
+    width: 500px;
+}
+.about-subtitle {
+    color: white;
+    font-size: 3rem;
+}
+.about-text {
+    color: #fff;
+    font-size: 2rem;
+}
+
+.skill {
+    min-height: 100vh;
+    background-color: #191919;
+}
+.item {
+    border: 1px solid white;
+    padding: 20px;
+}
+.skill-content {
+    display: grid;
+    grid-template-columns: repeat(5frw 1);
+}
